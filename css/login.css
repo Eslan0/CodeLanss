@@ -1,12 +1,113 @@
 main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100vh
+  height: 100vh;
+  gap: 20px;
 }
 
-form {
+main {
+  font-family: Arial, sans-serif;
+  background: linear-gradient (right, #4facfe, #00f2fe);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container-login {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: left;
+
+}
+
+main h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: #4facfe;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+button:hover {
+  background: #00c6fb;
+}
+
+form a {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #4facfe;
+  text-decoration: none;
+
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+.container-Recuperação {
+  background: white;
+  padding: 55px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  text-align: left;
+}
+
+
+.container-Cadastro {
+  background: white;
+  padding: 55px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  text-align: left;
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #4facfe;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
 }
