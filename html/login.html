@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,16 +7,14 @@
     <title>Login CodeLanss App</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/login.css">
-    <style>
-        /* Código css movido para o arquivo login.css*/
-    </style>
     </head>
 
 <body>
     <main>
         
-        <div class="container-login">
-        <h1>Login</h1>
+        <div class="container container-login active">
+        
+            <h1>Login</h1>
         
         <form method="POST">
             <label for="email">Email</label>
@@ -37,7 +35,7 @@
        
     </form>
 
-       <div class="container-Recuperação">
+       <div class="container container-recovery">
        
         <h2>Recuperar Senha</h2>
            
@@ -50,25 +48,51 @@
             <button type="submit"> Enviar link de recuperação</button>
             
             <p>
-                <a href="#" onclick="showCard('login')" >Volte para o login</a>
+                <a href="#" onclick="showCard('login')" >Voltar para o login</a>
             </p>
             
+        </form>
+        
         </div>
 
-        <div class="container-Cadastro">
-            <form method="POST"></form>
+        <div class="container container-register">
+            <form method="POST">
+            
             <h2>Cadastrar-se</h2>
+            
             <input type="text" placeholder="Nome Completo" required>
+            
             <input type="email" placeholder="E-mail" required>
+            
             <input type="password" placeholder="Senha" required>
+            
             <input type="password" placeholder="Confirmar Senha" required>
+            
             <button type="submit">Criar Conta</button>
+            
             <a href="#" onclick="showCard('login')" >Já tem conta?</a>
+            
+        </form>
+        
         </div>
-            <!--vou tentar rodar um script depois aqui em baixo, só preciso ajeita as posições dos cartões-->
             
     </main>
 
+        <script>
+            function showCard(card) {
+                document.querySelectorAll(".container").forEach(div=> {div.classList.remove("active")});
+            const target = document.querySelector(".container-" + card);
+            if (target) {
+                target.classList.add("active");
+            } else {
+                console.warn("Card não encontrado", card);
+            }
+            return false;
+            
+            }
+            
+        </script>
+   
     
     
     
