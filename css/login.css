@@ -23,36 +23,64 @@ body {
   display: flex;
   align-items: center;         
   justify-content: flex-start; 
-  padding-left: 50px;         
+  padding-left: 50px;  
+         
 }
 
 .container-login {
+  width: 450px;
+  max-width: 450px;
   background: white;
-  padding: 40px;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  width: 300px;
   text-align: left;
   font-size: 15px;
   
 
 }
 
+
+.login-card-body {
+padding: 40px;
+
+}
+
+.recovery-card-body {
+padding: 55px;
+}
+
+.register-card-body {
+  padding: 20px;
+}
 main h1 {
   margin-bottom: 20px;
   color: #333;
   
+  
+}
+
+.card-header {
+background: linear-gradient(135deg,#fada,aliceblue);
+height: 100px;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+border-bottom: 5px solid;
+border-image: linear-gradient(135deg,#fada, aliceblue) 5;
+border-radius: 10px;
 }
 
 .container h1, 
 .container h2 {
   font-size: 2.2rem;
   font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
   line-height: 1.2;
   word-wrap: break-word;
   max-width: 100%;
+  
+ 
 }
 
 
@@ -60,22 +88,22 @@ input {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #fada;
   border-radius: 5px;
   font-size: 12px;
   
 }
 
 input:focus {
-  border-color: #4facfe;
+  border-color: rgba(247, 140, 204, 0.867);
   outline: none;
 }
 
 button {
   width: 100%;
   padding: 10px;
-  background: #4facfe;
-  color: white;
+  background: #fada;
+  color: aliceblue;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -84,14 +112,14 @@ button {
 
 
 button:hover {
-  background: #00c6fb;
+  background: rgba(247, 140, 204, 0.867);
 }
 
 form a {
   display: block;
   margin-top: 10px;
   font-size: 13px;
-  color: #4facfe;
+  color: rgba(247, 140, 204, 0.867);
   text-decoration: none;
 
 }
@@ -102,20 +130,21 @@ form a:hover {
 
 .container-recovery {
   background: white;
-  padding: 55px;
+  height: 200px;
+  width: 500px;
+  max-width: 500px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  width: 250px;
   text-align: left;
 }
 
 
 .container-register {
   background: white;
-  padding: 55px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  width: 250px;
+  width: 100px;
+  height: 200px;
   text-align: left;
 }
 
@@ -123,7 +152,7 @@ a {
   display: block;
   margin-top: 10px;
   font-size: 14px;
-  color: #4facfe;
+  color: #fada;
   text-decoration: none;
   
 }
@@ -139,12 +168,9 @@ a:hover {
 }
 
 .container {
-  width: 300px;
   display: none;
-  min-height: 350px;
   height: auto;
   display: none;              
-  max-width: 300px;           
   width: 100%;                
   border-radius: 12px;    
   word-wrap: break-word;
@@ -175,3 +201,6 @@ a:hover {
 .container.active {
   display: block;             
 }
+
+
+ 
