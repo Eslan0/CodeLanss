@@ -1,6 +1,74 @@
-# Getting Started with Create React App
+# Code Lanss
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Routes
+
+| Method | Route/Endpoint       | Description                    | Parameters      | Authentication |
+|--------|----------------------|--------------------------------|-----------------|----------------|
+| GET    | `/`                  | Home (inicio).                 | None            | No             |
+| GET    | `/login`             | Panel de login.                | None            | No             |
+| GET    | `/signup`            | Panel de cadrastro.            | None            | No             |
+| POST   | `/login`             | Enviar formulario de login.    | User data       | No             |
+| POST   | `/signup`            | Enviar formulario de cadrastro.| User data       | No             |
+| GET    | `/users`             | Lista todos os usuários.       | None            | Yes            |
+| POST   | `/users`             | Cria um novo usuário.          | User data       | Yes            |
+| GET    | `/users/{id}`        | Retorna um usuário específico. | `id` (in URL)   | Yes            |
+| PUT    | `/users/{id}`        | Atualiza um usuário existente. | `id` (in URL), User data | Yes   |
+| DELETE | `/users/{id}`        | Exclui um usuário.             | `id` (in URL)   | Yes            |
+| GET    | `/products`          | Retorna a lista de produtos.   | `limit`, `offset` | No           |
+| GET    | `/products/{id}`     | Retorna um produto específico. | `id` (in URL)   | No             |
+| GET    | `/orders`            | Rertonar lista de pedidos.     | None            | Yes            |
+| GET    | `/orders/{id}`       | Rertonar um pedido específico. | `id` (in URL)   | Yes            |
+| POST   | `/orders/{id}`       | Cria um novo pedido.           | Order data      | Yes            |
+| PUT    | `/orders/{id}`       | Atualizar um pedido.           | `id` (in URL), Order data | Yes  |
+| DELETE | `/orders/{id}`       | Exclui um pedido.              | `id` (in URL)   | Yes            |
+
+---
+
+### Project Structure
+
+```bach
+CodeLanss/
+├── css/                  # Pasta para arquivos CSS (estilos em cascata).
+│   ├── login.css         # Arquivo CSS com estilos específicos para a tela de login.
+│   ├── reset.css         # Arquivo CSS para "resetar" os estilos padrão dos navegadores, garantindo consistência.
+│   └── style.css         # Arquivo CSS principal para estilos gerais do site.
+│
+├── html/                 # Pasta para arquivos HTML.
+│   ├── index.html        # Página HTML principal do site.
+│   └── login.html        # Página HTML para login.
+│
+├── node_modules          # Pasta gerada pelo npm que armazena todas as dependências do projeto. Não deve ser editada ou enviada para controle de versão.
+│
+├── public/               # Contém arquivos estáticos que são servidos diretamente pelo servidor web.
+│   ├── favicon.ico       # Ícone da aba do navegador.
+│   ├── index.html        # Arquivo base da aplicação React. O código JavaScript é injetado aqui.
+│   ├── logo192.png       # Logo da aplicação para ícones de atalho em telas pequenas.
+│   ├── logo512.png       # Logo da aplicação para ícones de atalho em telas grandes.
+│   ├── manifest.json     # Arquivo de configuração para Progressive Web Apps (PWAs).
+│   └── robots.txt        # Arquivo que instrui os motores de busca sobre quais páginas do site devem ser rastreadas.
+│
+├── src/                  # Pasta com o código-fonte da aplicação (a parte mais importante do projeto).
+│   ├── assets/           # Contém recursos estáticos como imagens, fontes e outros arquivos auxiliares.
+│   │   └── logo.svg      # O logo da aplicação em formato de imagem vetorial.
+│   ├── components/       # Onde ficam os componentes React reutilizáveis da sua interface.
+│   ├── styles/           # Pasta para arquivos de estilo específicos da aplicação React, frequentemente usando pré-processadores.
+│   │   ├── App.scss      # Estilos para o componente principal (App). Arquivo SCSS (Sass).
+│   │   └── index.scss    # Estilos globais da aplicação. Arquivo SCSS (Sass).
+│   ├── tests/            # Pasta para arquivos de testes automatizados da aplicação.
+│   │   ├── App.test.ts   # Arquivo de teste para o componente App, escrito em TypeScript.
+│   │   └── setupTest.ts  # Arquivo de configuração para o ambiente de testes.
+│   ├── App.ts            # O componente principal da sua aplicação (escrito em TypeScript).
+│   ├── index.ts          # O ponto de entrada da aplicação, onde o React é inicializado e renderiza o componente App.
+│   └── react-app-env.d.ts# Arquivo de declaração de tipos para o ambiente React (TypeScript).
+│
+├── .gitignore            # Arquivo que lista os itens que o Git deve ignorar (ex: node_modules, arquivos de cache).
+├── package-lock.json     # Garante que todos que instalam o projeto tenham as mesmas versões de dependências.
+├── package.json          # Contém os metadados do projeto, dependências e scripts para rodar a aplicação.
+├── README.md             # O arquivo de documentação principal do projeto, geralmente o primeiro a ser lido.
+└── tsconfig.json         # Arquivo de configuração do TypeScript, definindo como o compilador deve funcionar.
+```
+
+---
 
 ## Available Scripts
 
@@ -38,9 +106,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
